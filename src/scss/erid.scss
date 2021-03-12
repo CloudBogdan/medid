@@ -220,10 +220,10 @@ $gap-length: 10;
     }
 
     @for $i from 0 through $gap-length {
-        &:not(.flex-column).gap-#{$i} *:not(:last-child) {
+        &:not(.flex-column).gap-#{$i} > *:not(:last-child) {
             margin-right: $gap * $i;
         }
-        &.flex-column.gap-#{$i} *:not(:last-child) {
+        &.flex-column.gap-#{$i} > *:not(:last-child) {
             margin-bottom: $gap * $i;
         }
         // &.flex-col.gap-#{$i} *:not(:last-child),
