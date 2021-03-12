@@ -137,7 +137,7 @@ hr {
 
     display: flex;
     flex-direction: column;
-    @extend .flex.gap-2;
+    @extend .flex.flex-column.gap-2;
 
     background: #fff;
     border-radius: 1.5em;
