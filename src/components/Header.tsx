@@ -72,7 +72,7 @@ const Header: React.FC<IHeader> = props=> {
                     <CogIcon />
                     <span>Настройки</span>
                 </button> */}
-                <button onClick={ ()=> history.push("about") } className="no-anim ghost mt-1">
+                <button onClick={ ()=> history.push("about") } className="no-anim ghost mt-2">
                     <InfoIcon />
                     <span>О приложении</span>
                 </button>

@@ -183,7 +183,7 @@ $gap-length: 10;
 .flex, .slot {
     display: flex;
 
-    &.flex-col, &.flex-column {
+    &.flex-column {
         flex-direction: column;
     }
     &.flex-row {
@@ -220,9 +220,16 @@ $gap-length: 10;
     }
 
     @for $i from 0 through $gap-length {
-        &.gap-#{$i} {
-            gap: $gap * $i;
+        &:not(.flex-column).gap-#{$i} *:not(:last-child) {
+            margin-right: $gap * $i;
         }
+        &.flex-column.gap-#{$i} *:not(:last-child) {
+            margin-bottom: $gap * $i;
+        }
+        // &.flex-col.gap-#{$i} *:not(:last-child),
+        // &.flex-column.gap-#{$i} *:not(:last-child) {
+        //     margin-bottom: $gap * $i;
+        // }
     }
 
 }

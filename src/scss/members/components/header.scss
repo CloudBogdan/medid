@@ -17,7 +17,7 @@
         button {
             @extend .slot;
             @extend .slot.justify-start;
-            @extend .slot.gap-1;
+            @extend .slot.gap-2;
         }
     
     }
