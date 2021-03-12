@@ -1,0 +1,7 @@
+{
+  "name": "medid",
+  "integrations": {
+      "capacitor": true
+  },
+  "type": "react"
+}

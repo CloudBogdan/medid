@@ -1,0 +1,29 @@
+.header {
+    width: 100%;
+    height: 200px;
+    padding: 0 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    background: #fff;
+    border-bottom: 2px solid $grey-alpha;
+
+    .drop-down {
+        width: 250px;
+    
+        button {
+            @extend .slot;
+            @extend .slot.justify-start;
+            @extend .slot.gap-1;
+        }
+    
+    }
+    
+}
+.drop-down {
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, .1);
+    background: #fff;
+}

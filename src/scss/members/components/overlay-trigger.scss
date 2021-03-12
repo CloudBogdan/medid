@@ -1,0 +1,42 @@
+.overlay-trigger {
+
+    .overlay-wrapper {
+        position: absolute;
+        right: 0;
+        top: 100%;
+        z-index: 999;
+
+        transform: scale(0);
+        transition-delay: .2s;
+        
+        .overlay {
+            width: max-content;
+            transform: translateY(10px);
+            opacity: 0;
+            transition: .2s;
+        }
+
+        &.active {
+            transform: scale(1);
+            transition-delay: 0s;
+            
+            .overlay {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        &.place-left-bottom {
+            right: 0;
+            bottom: 0;
+            margin-top: 10px;
+        }
+        &.place-right-top {
+            left: 0;
+            top: 0;
+            transform: translateY(calc(-100% - 10px));
+        }
+
+    }
+
+}

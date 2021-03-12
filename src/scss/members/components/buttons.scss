@@ -1,0 +1,139 @@
+button, .button {
+    @extend %ff;
+    border: none;
+    background: $grey-alpha;
+    color: #505050;
+    transition: .2s;
+    &:not(.no-anim) {
+        @extend .effect-scale;
+    }
+}
+button:not(.unbutton), .button {
+    height: 40px;
+    padding: 0 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    border-radius: 1em;
+    @extend .title;
+    @extend .slot.gap-2;
+    
+    &.color-primary {
+        background: $green;
+        color: #fff;
+    }
+    &.color-danger {
+        background: $red;
+        color: #fff;
+    }
+    &.color-success {
+        background: $blue;
+        color: #fff;
+    }
+    
+    &.ghost {
+        background: transparent;
+        color: $dark;
+        &.color-primary {
+            color: $green;
+        }
+        &.color-danger {
+            color: $red;
+        }
+        &.color-success {
+            color: $blue;
+        }
+        &:active {
+            background: $grey-alpha;
+            &.color-primary {
+                background: $green-alpha;
+            }
+            &.color-danger {
+                background: $red-alpha;
+            }
+            &.color-success {
+                background: $blue-alpha;
+            }
+        }
+    }
+    &.compact {
+        width: 40px;
+        min-width: 40px;
+        padding: 0;
+
+        &.size-large {
+            width: 50px;
+            min-width: 50px;
+            height: 50px;
+        }
+        &.size-small {
+            width: 30px;
+            min-width: 30px;
+            height: 30px;
+
+            border-radius: .9em;
+        }
+
+    }
+    &.pill {
+        border-radius: 40px;
+    }
+    &.as-link {
+        padding: 0;
+
+        color: $grey;
+        background: transparent;
+        transform: scale(1) !important;
+
+        &::after {
+            content: "";
+
+            width: 0;
+            height: 2px;
+            
+            position: absolute;
+            bottom: 4px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            background: $green;
+            border-radius: 2px;
+            opacity: 0;
+
+            transition: .1s;
+        }
+        &.color-primary {
+            color: $green;
+            &::after {
+                width: 20px;
+                opacity: 1;
+            }
+        }
+
+    }
+
+    &.unattract {
+        color: $grey;
+    }
+
+    &:not(.compact).size-small {
+        height: 30px;
+        padding: 0 10px;
+    }
+
+    &:disabled {
+        opacity: .5;
+    }
+
+}
+.button-shadow {
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

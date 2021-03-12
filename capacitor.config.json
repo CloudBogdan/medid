@@ -1,0 +1,7 @@
+{
+    "appId": "com.medid.app",
+    "appName": "medid",
+    "webDir": "build",
+    "npmClient": "yarn"
+}
+  
