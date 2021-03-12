@@ -29,10 +29,9 @@ const OverlayTrigger: React.FC<IOverlayTrigger> = props=> {
                     if (props.trigger === "hover")
                     setActive(true);
                 } }
-                // onBlur={ ()=> {
-                //     // if (props.trigger === "hover")
-                //         setActive(false);
-                // } }
+                onBlur={ ()=> {
+                    setActive(false);
+                } }
             >
                 { props.children }
             </span>
