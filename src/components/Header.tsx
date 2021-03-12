@@ -46,7 +46,7 @@ const Header: React.FC<IHeader> = props=> {
                     <span>Выделить элементы</span>
                 </button>
 
-                <button
+                {/* <button
                     onClick={ ()=> setShowClassesAlert(true) }
                     className="no-anim ghost justify-between"
                 >
@@ -55,7 +55,7 @@ const Header: React.FC<IHeader> = props=> {
                         <span>Классы</span>
                     </div>
                     <span>{ classes.length }</span>
-                </button>
+                </button> */}
 
                 <button
                     onClick={ ()=> history.push("trash") }
